@@ -17,6 +17,6 @@ services:
           property: connectionString
 
 databases:
-  - name: database
+  - name: elephant
     databaseName: jameslecoat # optional (Render may add a suffix)
     plan: free
