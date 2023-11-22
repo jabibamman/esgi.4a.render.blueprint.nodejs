@@ -8,7 +8,6 @@ services:
     startCommand: npm start
     plan: free # optional (defaults to starter instance type)
     branch: master # optional (defaults to master)
-    healthCheckPath: /
     envVars:
       - key: DB_URL
         fromDatabase:
@@ -17,5 +16,6 @@ services:
 
 databases:
   - name: elephant
+    region: frankfurt
     databaseName: jameslecoat # optional (Render may add a suffix)
     plan: free
