@@ -1,0 +1,24 @@
+vservices:
+  # A static site
+  - type: web
+    name: blueprint website
+    runtime: static
+    buildCommand: npm i; npm run build
+    staticPublishPath: dist
+    buildFilter:
+      paths:
+      - src/**/*.js
+      ignoredPaths:
+      - src/**/*.test.js
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  - name: database
+    databaseName: jameslecoat # optional (Render may add a suffix)
