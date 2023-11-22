@@ -8,7 +8,6 @@ services:
     startCommand: npm start
     plan: free # optional (defaults to starter instance type)
     branch: master # optional (defaults to master)
-    rootDir: webdis
     healthCheckPath: /
     envVars:
       - key: DB_URL
